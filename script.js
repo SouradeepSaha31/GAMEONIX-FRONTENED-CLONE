@@ -107,66 +107,122 @@ function heroTextAnimation(){
 }
 heroTextAnimation()
 
-
-var swiper = new Swiper(".mySwiper", {
-      // autoHeight: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      loop: true,                 // infinite loop
-      speed: 400,                 // slide transition time (ms)
-      autoplay: {
-        delay: 4000,              // time gap between slides (ms)
-        disableOnInteraction: false
-      },
-    });
-
-
-let slide = document.querySelectorAll('.swiper-slide');
-let animatedLine = document.querySelectorAll('.animated-line');
-let lineAnimationBox = document.querySelectorAll('.swiper-slide .texts .heading');
-slide.forEach((slid, index) => {
-  slid.addEventListener('mouseenter', () => {
-    animatedLine[index].style.width = "100%";
-    lineAnimationBox[index].style.alignItems = "flex-start";
-  })
-  slid.addEventListener('mouseleave', () => {
-    animatedLine[index].style.width = "0%";
-    lineAnimationBox[index].style.alignItems = "flex-end";
-  })
-});
-
-
-let gamecard = document.querySelectorAll('.game_card');
-let cardoverlay = document.querySelectorAll('.card_overlay');
-let cardoverlayicon = document.querySelectorAll('.card_overlay i');
-gamecard.forEach((card, index) => {
-  card.addEventListener('mouseenter', () => {
-    gsap.to(cardoverlay[index], {
-      y:0,
-      duration: 0.5,
-      ease: "back.out(2)"
+function swiperAndInnerSwiperAnimations(){
+  var swiper = new Swiper(".mySwiper", {
+        // autoHeight: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        loop: true,                 // infinite loop
+        speed: 400,                 // slide transition time (ms)
+        autoplay: {
+          delay: 4000,              // time gap between slides (ms)
+          disableOnInteraction: false
+        },
+      });
+  
+  
+  let slide = document.querySelectorAll('.swiper-slide');
+  let animatedLine = document.querySelectorAll('.animated-line');
+  let lineAnimationBox = document.querySelectorAll('.swiper-slide .texts .heading');
+  slide.forEach((slid, index) => {
+    slid.addEventListener('mouseenter', () => {
+      animatedLine[index].style.width = "100%";
+      lineAnimationBox[index].style.alignItems = "flex-start";
     })
-    gsap.to(cardoverlayicon[index], {
-      scale:1.3,
-      duration: 0.6,
-      delay: 0.1,
-      ease: "power2.out"
+    slid.addEventListener('mouseleave', () => {
+      animatedLine[index].style.width = "0%";
+      lineAnimationBox[index].style.alignItems = "flex-end";
     })
-  })
-  card.addEventListener('mouseleave', () => {
-    gsap.to(cardoverlay[index], {
-      y:"100%",
-      duration: 0.2,
-      ease: "power2.out"
-    })
-    gsap.to(cardoverlayicon[index], {
-      scale:0,
-      duration: 0.5,
-      ease: "power2.out"
-    })
-  })
-})
+  });
 
-// hi
+}
+swiperAndInnerSwiperAnimations()
+
+
+function gameCardAnimation(){
+  let gamecard = document.querySelectorAll('.game_card');
+  let cardoverlay = document.querySelectorAll('.card_overlay');
+  let cardoverlayicon = document.querySelectorAll('.card_overlay i');
+  gamecard.forEach((card, index) => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(cardoverlay[index], {
+        y:0,
+        duration: 0.5,
+        ease: "back.out(2)"
+      })
+      gsap.to(cardoverlayicon[index], {
+        scale:1.3,
+        duration: 0.6,
+        delay: 0.1,
+        ease: "power2.out"
+      })
+    })
+    card.addEventListener('mouseleave', () => {
+      gsap.to(cardoverlay[index], {
+        y:"100%",
+        duration: 0.2,
+        ease: "power2.out"
+      })
+      gsap.to(cardoverlayicon[index], {
+        scale:0,
+        duration: 0.5,
+        ease: "power2.out"
+      })
+    })
+  })
+
+}
+gameCardAnimation()
+
+function gameCardScrollAnimation(){
+  gsap.from("#popular_games .popular_upper", {
+    x : -400,
+    opacity: 0,
+    duration:1,
+    ease : "power2.inOut",
+    scrollTrigger : {
+      trigger : "#popular_games .popular_upper",
+      scroller : "body",
+      // markers : true,
+      start:"top 80%"
+    }
+  })
+  gsap.from("#popular_games .popular_lower", {
+    x : 400,
+    opacity: 0,
+    duration:1,
+    ease : "power2.inOut",
+    scrollTrigger : {
+      trigger : "#popular_games .popular_lower",
+      scroller : "body",
+      // markers : true,
+      start:"top 85%"
+    }
+  })
+  
+}
+gameCardScrollAnimation()
+
+function whyChooseInnerAnimation(){
+  let why_choose_card = document.querySelectorAll(".why_choose_card")
+  let why_choose_redline = document.querySelectorAll(".whychoose_redline")
+  let why_choose_logoBackground = document.querySelectorAll(".why_choose_card .logo_div")
+  let why_choose_logo = document.querySelectorAll(".why_choose_card .logo_div i")
+  why_choose_card.forEach((card, idx)=>{
+    card.addEventListener("mouseenter", ()=>{
+      why_choose_redline[idx].style.width = "100%"
+      why_choose_logoBackground[idx].style.backgroundColor = "red"
+      why_choose_logoBackground[idx].style.rotate = "10deg"
+      why_choose_logo[idx].style.color = "#fff"
+    })
+    card.addEventListener("mouseleave", ()=>{
+      why_choose_redline[idx].style.width = "50px"
+      why_choose_logoBackground[idx].style.backgroundColor = "#270000"
+      why_choose_logoBackground[idx].style.rotate = "0deg"
+      why_choose_logo[idx].style.color = "red"
+    })
+  })
+}
+whyChooseInnerAnimation()

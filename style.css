@@ -420,6 +420,7 @@ nav #logo{
     min-height: 100vh;
     background-color: #121212;
     padding: 0px 7vw;
+    overflow-x: hidden;
 }
 
 #popular_games .popular_upper{
@@ -570,3 +571,123 @@ nav #logo{
     font-size: 2.2rem;  
     scale: 0;
 }
+
+/* --------------------------------------------------why choose gameonix---------------------------------------------------- */
+
+#why_choose_gameonix{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #333333;
+    padding: 5vw 7vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#whyChooseBall1{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    right: -150px;
+    top: -150px;
+    background-color: rgba(255, 0, 0, 0.137);
+    border-radius: 50%;
+}
+#whyChooseBall2{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+    background-color: rgba(255, 0, 0, 0.096);
+    border-radius: 50%;
+}
+
+#why_choose_gameonix .why_choose_gameonix_upper{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+
+#why_choose_gameonix .why_choose_gameonix_upper h1{
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+#why_choose_gameonix .why_choose_gameonix_upper .red_line{
+    width: 300px;
+    height: 4px;
+    background-color: red;
+}
+
+#why_choose_gameonix .why_choose_gameonix_upper p{
+    color: #C7C7C7;
+    font-size: 1.3rem;
+}
+
+#why_choose_gameonix .why_choose_gameonix_lower{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* border: 2px solid red; */
+}
+
+#why_choose_gameonix .why_choose_gameonix_lower .why_choose_card{
+    background-color: #000;
+    width: 360px;
+    height: 300px;
+    border-radius: 20px;
+    padding: 3.5vw 2.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    transition: all ease 0.5s;
+}
+
+#why_choose_gameonix .why_choose_gameonix_lower .why_choose_card .logo_div{
+    background-color: #270000;
+    height: 55px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: all ease 0.5s;
+}
+#why_choose_gameonix .why_choose_gameonix_lower .why_choose_card .logo_div i{
+    font-size: 1.8rem;
+    color: red;
+    transition: all ease 0.5s;
+}
+#why_choose_gameonix .why_choose_gameonix_lower .why_choose_card h2{
+    color: #fff;
+}
+#why_choose_gameonix .why_choose_gameonix_lower .why_choose_card .whychoose_redline{
+    margin-top: 10px;
+    width: 50px;
+    height: 3px;
+    background-color: red;
+    transition: all ease-out 0.4s;
+
+}
+#why_choose_gameonix .why_choose_gameonix_lower .why_choose_card p{
+    color: #AEAEAE;
+    line-height: 23px;
+    font-size: 1rem;
+}
+
+.why_choose_card:hover{
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.473);
+    cursor: pointer;
+    transform: translateY(-5px);
+} 

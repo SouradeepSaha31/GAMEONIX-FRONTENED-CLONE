@@ -140,7 +140,6 @@ function swiperAndInnerSwiperAnimations(){
 }
 swiperAndInnerSwiperAnimations()
 
-
 function gameCardAnimation(){
   let gamecard = document.querySelectorAll('.game_card');
   let cardoverlay = document.querySelectorAll('.card_overlay');
@@ -226,3 +225,75 @@ function whyChooseInnerAnimation(){
   })
 }
 whyChooseInnerAnimation()
+
+function whyChooseGameonixAnimationScrollTrigger(){
+
+  gsap.from("#why_choose_gameonix .why_choose_gameonix_upper", {
+    opacity : 0,
+    scale : 0.5,
+    duration : 1,
+    scrollTrigger : {
+      trigger : "#why_choose_gameonix .why_choose_gameonix_upper",
+      scroller : "body",
+      // markers : true,
+      start : "top 85%"
+    }
+  })
+  // let why_choose_card = document.querySelectorAll(".why_choose_card")
+  gsap.from(".why_choose_gameonix_lower", {
+    opacity : 0,
+    x : -500,
+    duration : 0.8,
+    // stagger : 0.2,
+    scrollTrigger : {
+      trigger : ".why_choose_gameonix_lower",
+      scroller : "body",
+      // markers : true,
+      start : "top 70%"
+    }
+  })
+
+}
+whyChooseGameonixAnimationScrollTrigger()
+
+function questionAnswerEffect(){
+  let questionBox = document.querySelectorAll("#questions .many_questions .question_box .ques")
+  let ans = document.querySelectorAll("#questions .many_questions .question_box .ans")
+  let upDownLogo = document.querySelectorAll("#questions .many_questions .question_box .ques i")
+  let ansToggle = [0,0,0,0,0]
+
+  questionBox.forEach((box, idx) =>{
+    box.addEventListener("click", ()=>{
+      if(!ansToggle[idx]){
+        ans[idx].style.height = "auto"
+        ans[idx].style.paddingTop = "15px"
+        ans[idx].style.paddingBottom = "15px"
+        upDownLogo[idx].style.rotate = "180deg"
+        ansToggle[idx] = 1
+        for(let i = 0 ; i<ansToggle.length ; i++){
+          if (ansToggle[i] == 1){
+            if(i == idx) continue
+            else {
+              ans[i].style.height = "0"
+              ans[i].style.paddingTop = "0"
+              ans[i].style.paddingBottom = "0"
+              upDownLogo[i].style.rotate = "0deg"
+              ansToggle[i] = 0
+              break
+            }
+          }  
+        }
+        console.log(ansToggle)
+      }else{
+        ans[idx].style.height = "0"
+        ans[idx].style.paddingTop = "0"
+        ans[idx].style.paddingBottom = "0"
+        upDownLogo[idx].style.rotate = "0deg"
+        ansToggle[idx] = 0
+        console.log(ansToggle)
+      }
+    })
+  })
+
+}
+questionAnswerEffect()

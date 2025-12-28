@@ -651,6 +651,7 @@ nav #logo{
     align-items: flex-start;
     gap: 15px;
     transition: all ease 0.5s;
+    /* border: 2px solid red; */
 }
 
 #why_choose_gameonix .why_choose_gameonix_lower .why_choose_card .logo_div{
@@ -691,3 +692,236 @@ nav #logo{
     cursor: pointer;
     transform: translateY(-5px);
 } 
+
+/* --------------------------------------------------download_gameonix------------------------------------------------- */
+
+#download_gameonix{
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(45deg, #050000, #4B0202);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+#download_gameonix h1{
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+}
+#download_gameonix p{
+    color: #CCC8C8;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.lighted_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.lighted_button .playstore, .lighted_button .appstore{
+    width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+.lighted_button .playstore:hover{
+    background-color: red;
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.493);
+}
+.lighted_button .appstore:hover{
+    background-color: red;
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.493);
+}
+
+.lighted_button .playstore .playstore_logo, .lighted_button .appstore .appstore_logo{
+    width: 35%;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lighted_button .playstore .playstore_logo i, .lighted_button .appstore .appstore_logo i{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.lighted_button .playstore .content, .lighted_button .appstore .content{
+    width: 65%;
+    height: 100%;
+    /* background-color: #000; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    /* padding-left: 5px; */
+}
+.lighted_button .playstore .content #con1, .lighted_button .appstore .content #con2{
+    color: #ffffff;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+.lighted_button .playstore .content h4, .lighted_button .appstore .content h4{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------backed by---------------------------------------------------------- */
+
+#backed_by{
+    width: 100%;
+    height: 60vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#backed_by h1{
+    color: #fff;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+#backed_by .red_line{
+    width: 100px;
+    height: 4px;
+    background-color: red;
+    margin-bottom: 10px;
+}
+#backed_by p{
+    color: #B5B5B5;
+    font-size: 1.3rem;
+
+}
+#backed_by .add_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 80px;
+}
+#backed_by .add_box .addboxes{
+    width: 190px;
+    height: 90px;
+    background-color: #000;
+}
+#backed_by .add_box .addboxes img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* ------------------------------------------------------------questions-------------------------------------------------------- */
+
+#questions{
+    width: 100%;
+    /* min-height: 130vh; */
+    /* height: 130vh; */
+    background-color: rgb(51, 51, 51);
+    padding: 50px 0;
+}
+
+#questions .question_heading{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#questions .question_heading h1{
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+#questions .question_heading .red_line{
+    width: 20rem;
+    height: 4px;
+    background-color: red;
+    margin-bottom: 8px;
+}
+#questions .question_heading p{
+    color: #B5B5B5;
+    font-size: 1.3rem;
+}
+
+#questions .many_questions{
+    width: 70%;
+    /* height: 70%; */
+    /* border: 2px solid red; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#questions .many_questions .question_box{
+    width: 80%;
+    /* height: 160px; */
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+
+#questions .many_questions .question_box:hover{
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.301);
+}
+
+#questions .many_questions .question_box:hover #actu_question{
+    color: red;
+    transform: translateX(5px);
+}
+
+#questions .many_questions .question_box .ques{
+    width: 100%;
+    height: 70px;
+    /* background-color: #722a2a; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+#questions .many_questions .question_box .ques p{
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all ease 0.5s;
+}
+#questions .many_questions .question_box .ques i{
+    font-size: 2rem;
+    color: #fff;
+    rotate: 180deg;
+    transition: all ease 0.5s;
+}
+
+#questions .many_questions .question_box .ans{
+    width: 100%;
+    height: 0;
+    /* background-color: #270000; */
+    padding: 0 15px;
+    overflow: hidden;
+    /* transition: all ease 1s; */
+}
+#questions .many_questions .question_box .ans p{
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}

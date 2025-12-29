@@ -7,6 +7,7 @@ html, body, main{
     min-height: 100%;
     width: 100%;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* -----------------------------nav section------------------------------- */
@@ -84,6 +85,7 @@ nav #logo{
     background-image: linear-gradient(45deg, #050000, #4B0202);
     position: relative;
     overflow: hidden;
+    scroll-margin-top: 12vh;
 }
 
 .bubble_anmation_box{
@@ -421,6 +423,7 @@ nav #logo{
     background-color: #121212;
     padding: 0px 7vw;
     overflow-x: hidden;
+    scroll-margin-top: 12vh;
 }
 
 #popular_games .popular_upper{
@@ -581,6 +584,7 @@ nav #logo{
     padding: 5vw 7vw;
     position: relative;
     overflow: hidden;
+    scroll-margin-top: 12vh;
 }
 
 #whyChooseBall1{
@@ -704,6 +708,7 @@ nav #logo{
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
+    scroll-margin-top: 12vh;
 }
 
 #download_gameonix h1{
@@ -790,6 +795,7 @@ nav #logo{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #backed_by h1{
@@ -835,6 +841,7 @@ nav #logo{
     /* height: 130vh; */
     background-color: rgb(51, 51, 51);
     padding: 50px 0;
+    overflow: hidden;
 }
 
 #questions .question_heading{
@@ -924,4 +931,155 @@ nav #logo{
     color: #fff;
     font-size: 1rem;
     line-height: 1.5rem;
+}
+
+/* -------------------------------------------------------------------footer-------------------------------------------------------------- */
+
+#footer{
+    width: 100%;
+    min-height: 70vh;
+    height: auto;
+    background-color: #000;
+    padding: 0 7vw;
+}
+.footer_upper{
+    width: 100%;
+    /* height: 60vh; */
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer_upper_left{
+    width: 37%;
+    height: 60vh;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding-right: 20px;
+    padding-top: 5rem;
+}
+.footer_upper_left .gameonix_logo{
+    width: 60px;
+    height: 60px;
+}
+.footer_upper_left .gameonix_logo img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.footer_upper_left p{
+    color: #8f8f8f;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+}
+.social_links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.social_links .social_link{
+    width: 40px;
+    height: 40px;
+    background-color: #494949;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.social_links .social_link:hover{
+    background-color: red;
+    transform: translateY(-5px);
+}
+.social_links .social_link i{
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.footer_upper_right_links{
+    width: 21%;
+    height: 60vh;
+    /* border: 1px solid red; */
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+.footer_upper_right_links h2{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.footer_upper_right_links .red_line{
+    width: 50px;
+    height: 4px;
+    background-color: red;
+}
+.footer_upper_right_links a{
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    transition: all ease 0.3s;
+}
+.footer_upper_right_links a:hover{
+    color: red;
+    transform: translateX(5px);
+}
+
+@media (max-width : 950px){
+    .footer_upper_right_links{
+        width: 33%;
+    }
+    .footer_upper_left{
+        width: 33%;
+    }
+}
+@media (max-width : 720px){
+    .footer_upper_right_links{
+        width: 50%;
+    }
+    .footer_upper_left{
+        width: 50%;
+    }
+}
+@media (max-width : 480px){
+    .footer_upper_right_links{
+        width: 100%;
+        padding-top: 0;
+        height: auto;
+        margin-bottom: 40px;
+    }
+    .footer_upper_left{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+.footer_lower{
+    width: 100%;
+    height: 10vh;
+    border-top: 0.5px solid rgba(122, 122, 122, 0.473);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_lower p{
+    color: #6e6e6e;
+    font-size: 0.9rem;
 }

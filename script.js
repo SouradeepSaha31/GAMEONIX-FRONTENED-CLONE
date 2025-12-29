@@ -141,36 +141,45 @@ function swiperAndInnerSwiperAnimations(){
 swiperAndInnerSwiperAnimations()
 
 function gameCardAnimation(){
-  let gamecard = document.querySelectorAll('.game_card');
-  let cardoverlay = document.querySelectorAll('.card_overlay');
-  let cardoverlayicon = document.querySelectorAll('.card_overlay i');
-  gamecard.forEach((card, index) => {
-    card.addEventListener('mouseenter', () => {
-      gsap.to(cardoverlay[index], {
-        y:0,
-        duration: 0.5,
-        ease: "back.out(2)"
-      })
-      gsap.to(cardoverlayicon[index], {
-        scale:1.3,
-        duration: 0.6,
-        delay: 0.1,
-        ease: "power2.out"
-      })
-    })
-    card.addEventListener('mouseleave', () => {
-      gsap.to(cardoverlay[index], {
-        y:"100%",
-        duration: 0.2,
-        ease: "power2.out"
-      })
-      gsap.to(cardoverlayicon[index], {
-        scale:0,
-        duration: 0.5,
-        ease: "power2.out"
-      })
-    })
-  })
+let gamecard = document.querySelectorAll('.game_card');
+let cardoverlay = document.querySelectorAll('.card_overlay');
+let cardoverlayicon = document.querySelectorAll('.card_overlay i');
+
+gamecard.forEach((card, index) => {
+  card.addEventListener('mouseenter', () => {
+    gsap.to(cardoverlay[index], {
+      y: 0,
+      duration: 0.5,
+      ease: "back.out(2)",
+      overwrite: "auto"
+    });
+
+    gsap.to(cardoverlayicon[index], {
+      scale: 1.3,
+      duration: 0.6,
+      delay: 0.1,
+      ease: "power2.out",
+      overwrite: "auto"
+    });
+  });
+
+  card.addEventListener('mouseleave', () => {
+    gsap.to(cardoverlay[index], {
+      y: "100%",
+      duration: 0.3,
+      ease: "power2.out",
+      overwrite: "auto"
+    });
+
+    gsap.to(cardoverlayicon[index], {
+      scale: 0,
+      duration: 0.3,
+      ease: "power2.out",
+      overwrite: "auto"
+    });
+  });
+});
+
 
 }
 gameCardAnimation()
@@ -256,6 +265,69 @@ function whyChooseGameonixAnimationScrollTrigger(){
 }
 whyChooseGameonixAnimationScrollTrigger()
 
+function DownloadAndBackedByScrollTrigger(){
+
+  gsap.from("#download_gameonix h1", {
+    x : -200,
+    opacity : 0,
+    duration : 0.5,
+    scrollTrigger:{
+      trigger : "#download_gameonix h1",
+      scroller : "body",
+      // markers : true,
+      start : "top 85%"
+    }
+  })
+  gsap.from("#download_gameonix .download_gameonix_para", {
+    x : 200,
+    opacity : 0,
+    duration : 0.5,
+    scrollTrigger:{
+      trigger : "#download_gameonix .download_gameonix_para",
+      scroller : "body",
+      // markers : true,
+      start : "top 85%"
+    }
+  })
+  gsap.from(".lighted_button", {
+    scale : 0,
+    opacity : 0,
+    duration : 0.5,
+    scrollTrigger:{
+      trigger : ".lighted_button",
+      scroller : "body",
+      // markers : true,
+      start : "top 90%"
+    }
+  })
+
+
+  gsap.from("#backed_by h1, #backed_by .red_line, #backed_by p", {
+    x : 400,
+    opacity : 0,
+    duration : 0.5,
+    scrollTrigger:{
+      trigger : "#backed_by",
+      scroller : "body",
+      // markers : true,
+      start : "top 75%"
+    }
+  })
+  gsap.from("#backed_by .add_box", {
+    x : -400,
+    opacity : 0,
+    duration : 0.5,
+    scrollTrigger:{
+      trigger : "#backed_by .add_box",
+      scroller : "body",
+      // markers : true,
+      start : "top 80%"
+    }
+  })
+
+}
+DownloadAndBackedByScrollTrigger()
+
 function questionAnswerEffect(){
   let questionBox = document.querySelectorAll("#questions .many_questions .question_box .ques")
   let ans = document.querySelectorAll("#questions .many_questions .question_box .ans")
@@ -268,7 +340,7 @@ function questionAnswerEffect(){
         ans[idx].style.height = "auto"
         ans[idx].style.paddingTop = "15px"
         ans[idx].style.paddingBottom = "15px"
-        upDownLogo[idx].style.rotate = "180deg"
+        upDownLogo[idx].style.rotate = "0deg"
         ansToggle[idx] = 1
         for(let i = 0 ; i<ansToggle.length ; i++){
           if (ansToggle[i] == 1){
@@ -277,7 +349,7 @@ function questionAnswerEffect(){
               ans[i].style.height = "0"
               ans[i].style.paddingTop = "0"
               ans[i].style.paddingBottom = "0"
-              upDownLogo[i].style.rotate = "0deg"
+              upDownLogo[i].style.rotate = "180deg"
               ansToggle[i] = 0
               break
             }
@@ -288,7 +360,7 @@ function questionAnswerEffect(){
         ans[idx].style.height = "0"
         ans[idx].style.paddingTop = "0"
         ans[idx].style.paddingBottom = "0"
-        upDownLogo[idx].style.rotate = "0deg"
+        upDownLogo[idx].style.rotate = "180deg"
         ansToggle[idx] = 0
         console.log(ansToggle)
       }
@@ -297,3 +369,31 @@ function questionAnswerEffect(){
 
 }
 questionAnswerEffect()
+
+function questionAnswerScrollTrigger(){
+
+  gsap.from("#questions .question_heading", {
+    x : 400,
+    opacity : 0,
+    duration : 0.5,
+    scrollTrigger:{
+      trigger : "#questions .question_heading",
+      scroller : "body",
+      // markers : true,
+      start : "top 75%"
+    }
+  })
+  gsap.from("#questions .many_questions", {
+    x : -400,
+    opacity : 0,
+    duration : 0.5,
+    scrollTrigger:{
+      trigger : "#questions .many_questions",
+      scroller : "body",
+      // markers : true,
+      start : "top 75%"
+    }
+  })
+
+}
+questionAnswerScrollTrigger()

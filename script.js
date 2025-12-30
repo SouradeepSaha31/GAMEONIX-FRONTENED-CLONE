@@ -1,3 +1,20 @@
+function responsiveNavbarAnimation(){
+
+  let menuBar = document.querySelector("#responsive_navbar")
+  let flag = false
+  document.querySelector(".nav_menu_icon i").addEventListener("click", ()=>{
+    if (!flag){
+      menuBar.style.transform = "translateX(0%)"
+      flag = true
+    } else {
+      menuBar.style.transform = "translateX(110%)"
+      flag = false
+    }
+  })
+
+}
+responsiveNavbarAnimation()
+
 function bubbleAnimation(){
   let bubble1 = document.querySelectorAll('.bubble1');
   let bubble2 = document.querySelectorAll('.bubble2');
@@ -25,10 +42,10 @@ function bubbleAnimation(){
   ]
   
   bubble1.forEach((bubb, i) => {
-      bubb.style.top = randomTop1[i] ;
+      bubb.style.bottom = randomTop1[i] ;
   })
   bubble2.forEach((bubb, i) => {
-      bubb.style.top = randomTop2[i] ;
+      bubb.style.bottom = randomTop2[i] ;
   })
   bubble3.forEach((bubb, i) => {
       bubb.style.top = randomTop3[i] ;
@@ -36,7 +53,7 @@ function bubbleAnimation(){
   
   bubble1.forEach((bubb, i) => {
   gsap.to(bubb, {
-      y: -520,
+      y: -620,
       duration: 15,
       repeat: -1,
       ease: "linear",
@@ -46,7 +63,7 @@ function bubbleAnimation(){
   
   bubble2.forEach((bubb, i) => {
     gsap.to(bubb, {
-      y: -520,
+      y: -620,
       duration: 7,
       repeat: -1,
       ease: "linear",
@@ -56,7 +73,7 @@ function bubbleAnimation(){
   
   bubble3.forEach((bubb, i) => {
     gsap.to(bubb, {
-      y: -520,
+      y: -620,
       duration: 5,
       repeat: -1,
       ease: "linear",

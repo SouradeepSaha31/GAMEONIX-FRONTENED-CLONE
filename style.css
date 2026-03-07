@@ -1398,18 +1398,18 @@ nav #logo{
 
 @media (max-width : 950px){
     .footer_upper_right_links{
-        width: 33%;
+        width: 100%;
     }
     .footer_upper_left{
-        width: 33%;
+        width: 100%;
     }
 }
 @media (max-width : 720px){
     .footer_upper_right_links{
-        width: 50%;
+        width: 80%;
     }
     .footer_upper_left{
-        width: 50%;
+        width: 80%;
     }
 }
 @media (max-width : 480px){

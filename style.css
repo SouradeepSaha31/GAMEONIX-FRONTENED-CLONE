@@ -1266,25 +1266,40 @@ nav #logo{
     /* height: 60vh; */
     /* border: 1px solid green; */
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
+.footer-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.red-border{
+    width: 50%;
+    height: 2px;
+    background-color: red;
+}
+
 .footer_upper_left{
-    width: 37%;
-    height: 60vh;
+    width: 80%;
+    /* height: 60vh; */
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
-    padding-right: 20px;
-    padding-top: 5rem;
+    /* padding-right: 20px; */
+    padding-top: 3rem;
 }
 .footer_upper_left .gameonix_logo{
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
 }
 .footer_upper_left .gameonix_logo img{
     width: 100%;
@@ -1293,6 +1308,7 @@ nav #logo{
     background-size: 100% 100%;
 }
 .footer_upper_left p{
+    width: 60%;
     color: #8f8f8f;
     font-size: 0.9rem;
     line-height: 1.2rem;
@@ -1302,7 +1318,7 @@ nav #logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 .social_links .social_link{
     width: 40px;
@@ -1325,26 +1341,34 @@ nav #logo{
 }
 
 .footer_upper_right_links{
-    width: 21%;
-    height: 60vh;
+    width: 70%;
+    /* height: 60vh; */
     /* border: 1px solid red; */
-    padding-top: 5rem;
+    /* padding-top: 2rem; */
+    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 0.6rem;
 }
+
+.footer_quicklinks{
+    margin-top: 2rem;
+}
+
 .footer_upper_right_links h2{
     color: #fff;
     font-size: 1.5rem;
 }
-.footer_upper_right_links .red_line{
+/* .footer_upper_right_links .red_line{
     width: 50px;
     height: 4px;
     background-color: red;
-}
+} */
+
 .footer_upper_right_links a{
+    margin-right: 1rem;
     text-decoration: none;
     color: #8f8f8f;
     font-size: 0.9rem;
@@ -1352,9 +1376,24 @@ nav #logo{
     font-weight: 600;
     transition: all ease 0.3s;
 }
+
+.direction{
+    align-items: flex-end;
+    margin-left: 1rem;
+}
+
+.direction a{
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
 .footer_upper_right_links a:hover{
     color: red;
     transform: translateX(5px);
+}
+
+.footer_support{
+    margin-bottom: 3rem;
 }
 
 @media (max-width : 950px){
@@ -1384,11 +1423,6 @@ nav #logo{
         width: 100%;
     }
 }
-
-
-
-
-
 
 .footer_lower{
     width: 100%;

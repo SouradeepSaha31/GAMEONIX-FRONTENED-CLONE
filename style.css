@@ -1582,7 +1582,7 @@ nav #links {
     margin-bottom: 3rem;
 }
 
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 @media (max-width : 950px){
     .footer_upper_right_links{
         width: 100%;
@@ -1597,7 +1597,9 @@ nav #links {
     }
     .footer_upper_left{
         width: 80%;
-=======
+    }
+}
+/* ======= */
 @media (max-width : 950px) {
     .footer_upper_right_links {
         width: 33%;
@@ -1615,7 +1617,7 @@ nav #links {
 
     .footer_upper_left {
         width: 50%;
->>>>>>> dab075f (FAQ section modified)
+/* >>>>>>> dab075f (FAQ section modified) */
     }
 }
 

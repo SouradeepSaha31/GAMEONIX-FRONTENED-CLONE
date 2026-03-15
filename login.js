@@ -1,3 +1,20 @@
+function responsiveNavbarAnimation(){
+
+  let menuBar = document.querySelector("#responsive_navbar")
+  let flag = false
+  document.querySelector(".nav_menu_icon i").addEventListener("click", ()=>{
+    if (!flag){
+      menuBar.style.transform = "translateX(0%)"
+      flag = true
+    } else {
+      menuBar.style.transform = "translateX(110%)"
+      flag = false
+    }
+  })
+
+}
+responsiveNavbarAnimation()
+
 const tabLogin = document.getElementById('tab-login');
 const tabSignup = document.getElementById('tab-signup');
 const paneLogin = document.getElementById('pane-login');

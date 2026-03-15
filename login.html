@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameonix - Login / Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="page-bg"></div>
+
+    <nav>
+            <div id="logo">
+                <img src="https://gameonix.in/web/gameonix/images/gameonix_favicon.png" alt="">
+            </div>
+            <div id="links">
+                <div class="link_option">
+                    <a href="#hero" class="link_name">Home</a>
+                    <div class="link_underline"></div>
+                </div>
+                <div class="link_option">
+                    <a href="store.html" class="link_name">Store</a>
+                    <div class="link_underline"></div>
+                </div>
+                <div class="link_option">
+                    <a href="#why_choose_gameonix" class="link_name">Features</a>
+                    <div class="link_underline"></div>
+                </div>
+                <div class="link_option">
+                    <a href="#download_gameonix" class="link_name">Download</a>
+                    <div class="link_underline"></div>
+                </div>
+                <div class="link_option">
+                    <a href="#questions" class="link_name">FAQ</a>
+                    <div class="link_underline"></div>
+                </div>
+                <div class="link_option">
+                    <a href="login.html" class="link_name">Login</a>
+                    <div class="link_underline"></div>
+                </div>
+                <div class="nav_menu_icon">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+    </nav>
+
+    <main class="auth-wrap">
+        <div class="card">
+            <header class="brand">
+                <span class="logo">
+                    <img src="https://gameonix.in/web/gameonix/images/gameonix_favicon.png" alt="">
+                </span>
+                <h1>Gameonix</h1>
+            </header>
+
+            <div class="tab-header">
+                <button id="tab-login" class="tab active" type="button">Login</button>
+                <button id="tab-signup" class="tab" type="button">Sign Up</button>
+            </div>
+
+            <div class="form-pane" id="pane-login">
+                <form id="login-form" class="form" autocomplete="off">
+                    <div class="field">
+                        <input id="login-username" name="username" type="text" required minlength="3" placeholder=" ">
+                        <label for="login-username">Email or Username</label>
+                    </div>
+                    <div class="field">
+                        <input id="login-password" name="password" type="password" required minlength="6" placeholder=" ">
+                        <label for="login-password">Password</label>
+                        <button type="button" class="eye" data-target="login-password" title="Show/Hide password"></button>
+                    </div>
+                    <div class="form-row">
+                        <label><input id="remember-me" name="remember" type="checkbox"> Remember Me</label>
+                        <a class="link">Forgot Password?</a>
+                    </div>
+                    <button id="login-submit" class="btn submit">Sign In</button>
+                </form>
+            </div>
+
+            <div class="form-pane hidden" id="pane-signup">
+                <form id="signup-form" class="form" autocomplete="off">
+                    <div class="field">
+                        <input id="signup-name" name="name" type="text" required minlength="2" placeholder=" ">
+                        <label for="signup-name">Full Name</label>
+                    </div>
+                    <div class="field">
+                        <input id="signup-email" name="email" type="email" required placeholder=" ">
+                        <label for="signup-email">Email</label>
+                    </div>
+                    <div class="field">
+                        <input id="signup-username" name="username" type="text" required minlength="3" placeholder=" ">
+                        <label for="signup-username">Username</label>
+                    </div>
+                    <div class="field">
+                        <input id="signup-password" name="password" type="password" required minlength="6" placeholder=" ">
+                        <label for="signup-password">Password</label>
+                        <button type="button" class="eye" data-target="signup-password" title="Show/Hide password"></button>
+                    </div>
+                    <button id="signup-submit" class="btn submit">Create Account</button>
+                </form>
+            </div>
+
+            <div class="alt-action">Already have account? <a id="switch-login" class="link">Login</a></div>
+        </div>
+    </main>
+
+    <div id="toast" class="toast hidden" role="status" aria-live="polite">Loading...</div>
+
+    <script src="login.js"></script>
+</body>
+</html>
